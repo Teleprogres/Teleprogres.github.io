@@ -1,0 +1,235 @@
+// section 1 titre principal
+.meal {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+
+  @include responsive(phone) {
+    height: 55vh;
+  }
+  @include responsive(desktop) {
+    margin: 0 auto;
+    width: 60%;
+    height: 40vh;
+  }
+
+  &-restaurant {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    @include responsive(portable) {
+      object-position: center right;
+    }
+  }
+}
+// carte de présentation
+.card-descriptive-meal {
+  @include displayFlex;
+  align-items: center;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-color: $color_grey_light;
+
+  border-radius: 3rem 3rem 0 0;
+  @include responsive(phone) {
+    border-radius: 0;
+    height: 15%;
+    bottom: 0rem;
+  }
+  @include responsive(portable) {
+    background-color: $color_white;
+  }
+
+  &-left {
+    color: $color_text-primary;
+  }
+}
+
+//
+.content-meal {
+  background-color: $color_grey_light;
+  @include responsive(portable) {
+    background-color: $color_white;
+  }
+}
+//affichage juste pour le descktop
+.flex_descktop {
+  @include responsive(portable) {
+    @include flexCenter;
+    flex-wrap: wrap;
+  }
+  @include responsive(desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+
+// 
+.bloc-meal {
+  @include flexCenter;
+  flex-wrap: wrap;
+  padding-bottom: 2.5rem;
+  background-color: inherit;
+  flex-grow: 1;
+  width: 100%;
+
+  @include responsive(portable) {
+    padding-top: 4rem;
+    width: 40%;
+    &:last-child {
+      width: 80%;
+    }
+  }
+  @include responsive(desktop) {
+    width: 30%;
+    &:last-child {
+      width: 30%;
+    }
+  }
+
+  &-card {
+    @include displayFlex;
+    justify-content: stretch;
+    flex-wrap: nowrap;
+    height: 6rem;
+    margin: 0.6rem;
+    width: 90%;
+    background-color: $color_white;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    &:first-child {
+      height: 1.5rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+      background-color: $color_grey_light;
+      box-shadow: 0 0 0;
+      @include responsive(portable) {
+        background-color: $color_white;
+      }
+    }
+
+    &:not(:hover) > .bloc-meal-card-icon {
+      min-width: 0;
+    }
+    &:hover > .bloc-meal-card-icon {
+      min-width: 4rem;
+      @include responsive(phone-small) {
+        min-width: 6rem;
+      }
+    }
+    &:hover > .bloc-meal-card-icon .bloc-meal-card-validate {
+      opacity: 1;
+      animation: validate 0.4s linear forwards;
+    }
+    // @include responsive(phone) {
+    //   width: 70%;
+    // }
+
+    @include responsive(portable) {
+      // &:nth-child(2) {
+      //   width: 40%;
+      // }
+      // &:nth-child(3) {
+      //   width: 40%;
+      // }
+      // &:nth-child(4) {
+      //   width: 80%;
+      // }
+      // &:nth-child(5) {
+      //   width: 80%;
+      // }
+    }
+    // a revoir
+    @include responsive(desktop) {
+      // &:nth-child(2) {
+      //   width: 80%;
+      // }
+      // &:nth-child(3) {
+      //   width: 80%;
+      // }
+      // &:nth-child(4) {
+      //   width: 80%;
+      // }
+      // &:nth-child(5) {
+      //   width: 80%;
+      // }
+    }
+
+    // animation meal_to_bottom
+    &_one {
+      opacity: 0;
+      animation: meal_to_bottom 0.6s linear 0.5s forwards;
+    }
+    &_two {
+      opacity: 0;
+      animation: meal_to_bottom 0.6s linear 0.7s forwards;
+    }
+    &_three {
+      opacity: 0;
+      animation: meal_to_bottom 0.6s linear 0.9s forwards;
+    }
+    &_four {
+      opacity: 0;
+      animation: meal_to_bottom 0.6s linear 1.1s forwards;
+    }
+    &_five {
+      opacity: 0;
+      animation: meal_to_bottom 0.6s linear 1.3s forwards;
+    }
+
+    &-heading {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      min-width: 55%;
+      @include responsive(phone-small) {
+        min-width: 65%;
+      }
+      @include responsive(phone) {
+        min-width: 30%;
+      }
+    }
+    &-price {
+      width: 5rem;
+      padding-top: 3.8rem;
+      font-size: 0.9rem;
+      color: $color_text-primary;
+      font-weight: 700;
+      text-align: center;
+      transition: all 0.4s ease-in-out;
+      @include responsive(phone-small) {
+        font-size: $font_size-small-paragraph;
+      }
+    }
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-width: 0;
+      margin-left: 1px;
+      width: 0rem;
+      border-radius: 0 1.2rem 1.2rem 0;
+      background-color: $color_tertiary;
+      transform-origin: 100% 50%;
+      transition: all 0.4s ease-in-out;
+      @include responsive(phone-small) {
+        margin-left: 6px;
+      }
+    }
+    &-validate {
+      opacity: 0;
+      font-size: $font_size-very-small;
+      color: $color_white;
+      @include responsive(phone-small) {
+        font-size: $font_size-small-paragraph;
+      }
+    }
+  }
+}
