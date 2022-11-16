@@ -1,0 +1,17 @@
+// partie recherche
+.location-research {
+  &-box {
+    @include flexCenter;
+  }
+}
+// partie restaurant
+.restaurant-container {
+  @include flexCenter;
+  flex-wrap: wrap;
+}
+.card-descriptive {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+//

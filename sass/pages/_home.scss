@@ -1,0 +1,111 @@
+///
+/// // partie recherche
+.location-research {
+  background-color: #f9f9f9ef;
+  &-box {
+    border-top: 2px solid #dcdadacc;
+    background-color: #ececec;
+  }
+  &-icon {
+    padding: 1.5rem 0;
+    background-color: inherit;
+    border: none;
+    font-size: $font_size-medium;
+    font-weight: 400;
+    color: $color_text-secondary;
+    align-items: flex-end;
+  }
+
+  &-input {
+    @extend .location-research-icon;
+    text-align: center;
+    font-weight: 700;
+    outline: none;
+    @include responsive(phone) {
+      padding: 1.5rem 2rem;
+    }
+  }
+}
+///Contenaire global
+.restaurant {
+  background-color: $color_grey_light;
+  padding-bottom: 5rem;
+  @include responsive(desktop) {
+    background-color: #fffefeef;
+  }
+  // }
+  &-item {
+    position: relative;
+    flex-basis: 90%;
+    height: 30rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    margin-bottom: 2.5rem;
+    border-radius: 1.5rem;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      transform: scale(1.03);
+    }
+    @include responsive(portable) {
+      flex-basis: 40%;
+      &:not(:nth-of-type(even)) {
+        margin-right: 2.5rem;
+      }
+    }
+    @include responsive(desktop) {
+      flex-basis: 45%;
+    }
+  }
+  &-link:link,
+  &-link:visited {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+  &-image {
+    object-fit: cover;
+    // object-position:bottom;
+    width: 100%;
+    height: 75%;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+}
+// carte de présentation
+.card-descriptive {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  height: 20%;
+
+  &-left {
+    color: $color_text-primary;
+  }
+  // &-right {
+  //   position: relative;
+  //   margin-right: 2rem;
+  // &-icon_v {
+  //   font-size: $font_size-big;
+  //   color: $color_text-secondary;
+  //   cursor: grab;
+  //   &:hover {
+  //     opacity: 1;
+  //   }
+  //   &:focus {
+  //     opacity: 1;
+  //   }
+  // }
+  // &-icon_p {
+  //   @extend .card-descriptive-right-icon_v;
+  //   opacity: 0;
+  //   color: darken($color_primary, 2%);
+  // }
+  // &_box_v {
+  //   position: absolute;
+  //   left: -2.5rem;
+  // }
+  // &_box_p {
+  //   @extend .card-descriptive-right_box_v;
+  // }
+  // }
+}

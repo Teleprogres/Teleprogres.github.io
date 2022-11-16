@@ -1,0 +1,58 @@
+.footer {
+  // conteneur principal
+  background-color: $color_footer;
+  @include responsive(phone) {
+    @include displayFlex;
+    align-items: center;
+  }
+  @include responsive(desktop) {
+    @include flexCenter;
+    // flex-direction: row;
+  }
+  //
+  &-title {
+    // margin-left: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include responsive(phone) {
+      flex-basis: 100%;
+      text-align: center;
+    }
+    @include responsive(portable) {
+      margin-right: auto;
+      flex-basis: 0;
+    }
+  }
+  &-list {
+    list-style: none;
+    // margin-left: 1.5rem;
+    @include responsive(phone) {
+      @include flexCenter;
+      margin-bottom: 0;
+    }
+  }
+  &-items {
+    @include responsive(phone) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &-link:link,
+  :visited {
+    padding: 0.5rem 0;
+    display: block;
+    color: $color_white;
+    text-decoration: none;
+    font-size: $font_size-very-small;
+    @include responsive(phone-small) {
+      font-size: $font_size-small;
+    }
+    
+  }
+  &:last-child {
+    padding: 3rem;
+  }
+  &-icon_1 {
+    margin-right: 0.7rem;
+  }
+}

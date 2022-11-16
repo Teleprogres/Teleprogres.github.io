@@ -1,0 +1,42 @@
+.header {
+  background-color: $color_white;
+  &-logo {
+    @include flexCenter;
+    margin: 1.1rem auto;
+    flex-grow: 1;
+    @include responsive(portable) {
+      flex-grow: 0;
+    }
+  }
+
+  &-flech > .flech {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: $color_footer;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    @include responsive(phone-small) {
+      font-size: 2.2rem;
+    }
+
+    &:hover {
+      color: $color_primary;
+    }
+  }
+
+  &-box {
+    flex-grow: 1;
+    text-align: center;
+    @include responsive(desktop) {
+      width: 50%;
+      flex-grow: 0;
+    }
+    & > .image {
+      width: 10rem;
+      @include responsive(phone-small) {
+        width: 13rem;
+      }
+    }
+  }
+}
