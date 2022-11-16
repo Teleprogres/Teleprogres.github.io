@@ -1,8 +1,6 @@
 // partie recherche
-.location-research {
-  &-box {
-    @include flexCenter;
-  }
+.location {
+  @include flexCenter;
 }
 // partie restaurant
 .restaurant-container {

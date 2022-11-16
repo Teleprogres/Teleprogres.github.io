@@ -1,30 +1,41 @@
 ///
 /// // partie recherche
-.location-research {
-  background-color: #f9f9f9ef;
-  &-box {
-    border-top: 2px solid #dcdadacc;
-    background-color: #ececec;
-  }
-  &-icon {
-    padding: 1.5rem 0;
-    background-color: inherit;
-    border: none;
-    font-size: $font_size-medium;
-    font-weight: 400;
-    color: $color_text-secondary;
-    align-items: flex-end;
-  }
-
-  &-input {
-    @extend .location-research-icon;
-    text-align: center;
-    font-weight: 700;
-    outline: none;
-    @include responsive(phone) {
-      padding: 1.5rem 2rem;
+.location {
+  background-color: $bg-color-form;
+  border-top: 2px solid #dcdadacc;
+  z-index: 99;
+  &-box1 {
+    z-index: 110;
+    background-color: $bg-color-form;
+    margin-right: -30px;
+    &_icon {
+      padding: 1.1rem 0;
+      font-size: $font_size-small;
+      font-weight: 400;
+      color: $color_text-primary;
     }
   }
+  &-box2 {
+    z-index: 100;
+    &_input {
+      @extend .location-box1_icon;
+      display: inline-block;
+      background-color: $bg-color-form;
+      z-index: 100;
+      width: 18rem;
+      border: none;
+      text-align: center;
+      font-weight: 600;
+      margin: 0;
+      outline: none;
+      @include responsive(phone-small) {
+        width: 20rem;
+      }
+    }
+  }
+}
+.sec-title-main {
+  background-color: #f6f6f6;
 }
 ///Contenaire global
 .restaurant {
