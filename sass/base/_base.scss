@@ -13,9 +13,12 @@ html {
 
 body {
   font-family: $font-display;
+  position: relative;
+  
 }
 
 .content {
   margin: 0 auto;
   max-width: 1440px;
+
 }

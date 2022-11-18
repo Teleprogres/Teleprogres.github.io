@@ -40,7 +40,7 @@
     opacity: 0.2;
   }
   30% {
-    opacity: 0.3;
+    opacity: 0.5;
     transform: scale(0.1);
   }
 
@@ -48,25 +48,24 @@
     opacity: 0.4;
   }
   50% {
-    transform: scale(0.4);
+    transform: scale(0.6);
     opacity: 0.5;
   }
-  60% {
-    opacity: 0.6;
-  }
+
   70% {
     opacity: 0.7;
-    transform: scale(0.7);
+    transform: scale(0.8);
   }
   80% {
     opacity: 0.8;
   }
   90% {
     opacity: 0.9;
-    transform: scale(0.9);
+    transform: scale(1.1);
   }
   100% {
     opacity: 1;
+    transform: scale(1);
   }
 }
 //
@@ -101,5 +100,25 @@
   }
   0% {
     opacity: 0;
+  }
+}
+// loader
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes loader {
+  99.99% {
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
   }
 }
