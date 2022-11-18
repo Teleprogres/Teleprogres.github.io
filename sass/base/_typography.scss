@@ -8,6 +8,9 @@
     font-size: $font_size-small;
     font-weight: 900;
     color: $color_text-primary;
+    animation: name duration timing-function delay iteration-count direction
+      fill-mode;
+    animation: moveInLeft 2s ease-in-out 5s;
     @include responsive(phone-small) {
       font-size: $font_size-medium;
     }
@@ -22,6 +25,7 @@
     text-align: center;
     color: $color_text-secondary;
     backface-visibility: hidden;
+    animation: moveInRight 2s ease-in-out 5s;
   }
 }
 //partie aside
@@ -31,10 +35,10 @@
   @include responsive(phone-small) {
     font-size: $font_size-medium;
   }
-   @include responsive(phone) {
+  @include responsive(phone) {
     margin-left: 5%;
   }
-   @include responsive(portable) {
+  @include responsive(portable) {
     margin-left: 2%;
   }
 }
@@ -74,8 +78,8 @@
   font-size: $font_size-very-small;
   border-radius: 3px;
   @include responsive(phone-small) {
-      font-size: $font_size-small-paragraph;
-    }
+    font-size: $font_size-small-paragraph;
+  }
 }
 .card-descriptive {
   &-heading {
@@ -84,7 +88,7 @@
     padding-top: 1rem;
     text-indent: 2rem;
     color: inherit;
-      @include responsive(phone-small) {
+    @include responsive(phone-small) {
       font-size: $font_size-small;
     }
   }
@@ -95,7 +99,7 @@
     padding-top: 0.5rem;
     color: inherit;
     color: inherit;
-      @include responsive(phone-small) {
+    @include responsive(phone-small) {
       font-size: $font_size-small;
     }
   }
@@ -156,7 +160,7 @@
       height: 3px;
       background: $color_tertiary;
     }
-    &:hover::after{
+    &:hover::after {
       width: 90%;
     }
     @include responsive(phone-small) {

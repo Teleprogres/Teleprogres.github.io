@@ -105,9 +105,9 @@
     cursor: pointer;
     transition: all 0.4s ease-in-out;
     &:first-child {
-      height: 1.5rem;
+      height:3rem;
       width: 100%;
-      margin-bottom: 1.5rem;
+      // margin-bottom: 1rem;
       background-color: $color_grey_light;
       box-shadow: 0 0 0;
       @include responsive(portable) {
@@ -128,40 +128,6 @@
       opacity: 1;
       animation: validate 0.4s linear forwards;
     }
-    // @include responsive(phone) {
-    //   width: 70%;
-    // }
-
-    @include responsive(portable) {
-      // &:nth-child(2) {
-      //   width: 40%;
-      // }
-      // &:nth-child(3) {
-      //   width: 40%;
-      // }
-      // &:nth-child(4) {
-      //   width: 80%;
-      // }
-      // &:nth-child(5) {
-      //   width: 80%;
-      // }
-    }
-    // a revoir
-    @include responsive(desktop) {
-      // &:nth-child(2) {
-      //   width: 80%;
-      // }
-      // &:nth-child(3) {
-      //   width: 80%;
-      // }
-      // &:nth-child(4) {
-      //   width: 80%;
-      // }
-      // &:nth-child(5) {
-      //   width: 80%;
-      // }
-    }
-
     // animation meal_to_bottom
     &_one {
       opacity: 0;
