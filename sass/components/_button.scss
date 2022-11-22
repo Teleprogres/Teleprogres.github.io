@@ -1,0 +1,54 @@
+//
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    background: linear-gradient(
+      to right bottom,
+      $color_secondary,
+      $color_primary
+    );
+    padding: 1rem 2rem;
+    text-align: center;
+    border: none;
+    border-radius: 9999px;
+    color: $color_white;
+    font-size: $font_size-very-small;
+    font-weight: 500;
+    margin-bottom: $margin_button_bottom-big;
+
+    &:hover {
+      background: linear-gradient(
+        to right bottom,
+        $color_secondary 40%,
+        $color_primary
+      );
+      box-shadow: 0px 5px 10px 0px darken(#b4b4b4, 15%);
+      &::after {
+        transform: scaleX(1.8) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+    &:active {
+      outline: none;
+      box-shadow: 0 0.5rem 1rem rgba($color_grey_light, 0.15);
+      transform: translateY(-1px);
+    }
+    @include responsive(phone-small) {
+      font-size: $font_size-very-small;
+    }
+    @include responsive(phone) {
+      font-size: $font_size-small;
+    }
+  }
+  &-commander {
+    margin-top: 0.5rem;
+    padding: 1rem 3rem;
+  }
+}
+// autres page html
+.btn_box {
+  text-align: center;
+  height: 12rem;
+}

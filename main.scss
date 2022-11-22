@@ -1,0 +1,24 @@
+// Abstract
+@import "sass/absracts/variable";
+@import "sass/absracts/mixins";
+@import "sass/absracts/function";
+
+// base
+@import "sass/base/base";
+@import "sass/base/typography";
+@import "sass/base/animations";
+@import "sass/base/utilities";
+
+//layaout
+@import "sass/layout/header";
+@import "sass/layout/home_layout";
+@import "sass/layout/footer";
+
+// pages
+@import "sass/pages/home";
+
+//compopents
+@import "sass/components/button";
+@import "sass/components/fonctionning";
+@import "sass/components/form.scss";
+@import "sass/components/heart.scss";

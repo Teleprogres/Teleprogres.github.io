@@ -1,0 +1,204 @@
+//Page d'accueil home
+
+// titre principal
+.heading {
+  text-align: center;
+  &-main {
+    padding-top: 2.5rem;
+    font-size: $font_size-small;
+    font-weight: 900;
+    color: $color_text-primary;
+
+    @include responsive(phone-small) {
+      font-size: $font_size-medium;
+    }
+    @include responsive(phone) {
+      font-size: $font_size-big;
+    }
+    @include responsive(big_desktop) {
+      animation: moveInLeft 2s ease-in-out 5s;
+    }
+  }
+  &-paragraph {
+    margin: 1.2rem auto 2.5rem;
+    font-size: $font_size-small;
+    font-weight: 400;
+    text-align: center;
+    color: $color_text-secondary;
+    backface-visibility: hidden;
+
+    @include responsive(big_desktop) {
+      animation: moveInRight 2s ease-in-out 5s;
+    }
+  }
+}
+
+//partie aside
+.aside-heading {
+  margin-bottom: 2rem;
+  font-size: $font_size-small;
+  @include responsive(phone-small) {
+    font-size: $font_size-medium;
+  }
+  @include responsive(phone) {
+    margin-left: 5%;
+  }
+  @include responsive(portable) {
+    margin-left: 2%;
+  }
+}
+
+// section restaurant
+.restaurant {
+  &-title {
+    height: 8rem;
+  }
+  &-heading {
+    font-size: $font_size-small;
+    line-height: 4;
+    margin-left: 1.5rem;
+    @include responsive(phone-small) {
+      font-size: $font_size-medium;
+    }
+    @include responsive(phone) {
+      margin-left: 5rem;
+    }
+
+    @include responsive(portable) {
+      margin-left: 7rem;
+    }
+    @include responsive(desktop) {
+      margin-left: 5rem;
+    }
+  }
+}
+// sous titre page home nouveau
+.heading-presentation-card {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.7rem 1.3rem;
+  background-color: $color_tertiary;
+  color: darken($color_tertiary, 40%);
+  font-size: $font_size-very-small;
+  border-radius: 3px;
+  @include responsive(phone-small) {
+    font-size: $font_size-small-paragraph;
+  }
+}
+.card-descriptive {
+  &-heading {
+    font-size: $font_size-very-small;
+    font-weight: 900;
+    padding-top: 1rem;
+    text-indent: 2rem;
+    color: inherit;
+    @include responsive(phone-small) {
+      font-size: $font_size-small;
+    }
+  }
+  &-adresse {
+    font-size: $font_size-small-paragraph;
+    font-weight: 400;
+    text-indent: 2rem;
+    padding-top: 0.5rem;
+    color: inherit;
+    color: inherit;
+    @include responsive(phone-small) {
+      font-size: $font_size-small;
+    }
+  }
+}
+// titre footer
+.footer {
+  &-heading {
+    font-family: $font_heading;
+    font-size: $font_size-small;
+    font-weight: 400;
+    color: $color_white;
+    @include responsive(phone-small) {
+      font-size: $font_size-big;
+    }
+  }
+}
+// autres page html
+//  a la française,palette du gout et autres
+
+//  titre principal
+.card-descriptive-meal {
+  &-left {
+    margin-right: auto;
+    flex-basis: 80%;
+  }
+  &-heading {
+    text-indent: 0.5rem;
+    margin-left: 15%;
+    font-size: $font_size-very-small;
+    font-family: $font_heading;
+    font-weight: 400;
+    @include responsive(phone-small) {
+      font-size: $font_size-medium;
+    }
+    @include responsive(phone) {
+      margin-left: 20%;
+      font-size: $font_size-big;
+    }
+    @include responsive(desktop) {
+      margin-left: 10%;
+    }
+  }
+}
+
+// titre sécondaire
+.bloc-meal-card {
+  &-heading-secondary {
+    font-size: $font_size-very-small;
+    color: $color_text-secondary;
+    text-transform: uppercase;
+    text-indent: 5px;
+    margin-left: 6%;
+    &::after {
+      content: "";
+      display: block;
+      margin: 5px 0 0 7px;
+      width: 70%;
+      height: 3px;
+      background: $color_tertiary;
+    }
+    &:hover::after {
+      width: 90%;
+    }
+    @include responsive(phone-small) {
+      font-size: $font_size-small;
+    }
+    @include responsive(phone) {
+      margin-left: 10%;
+    }
+    @include responsive(desktop) {
+      margin-left: 10%;
+    }
+  }
+  // titre troisieme niveau
+  &-heading-teriary {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 1rem 0 0.5rem;
+    text-indent: 1.5rem;
+    font-size: $font_size-very-small;
+    @include responsive(phone-small) {
+      font-size: $font_size-small;
+    }
+  }
+  // paragraphe
+  &-paragrap {
+    @extend .bloc-meal-card-heading-teriary;
+    font-size: $font_size-very-small;
+    color: $color_text-secondary;
+    padding: 0;
+    @include responsive(phone-small) {
+      font-size: $font_size-small-paragraph;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+//
+@mixin displayFlex {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//
+@mixin absCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// media
+// 1em = 16px
+
+@mixin responsive($breakpoint) {
+  //400px
+  @if $breakpoint==phone-small {
+    @media only screen and (min-width: 400px) {
+      @content;
+    }
+  }
+  //600px
+  @if $breakpoint == phone {
+    @media only screen and (min-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == portable {
+    //900px
+    @media only screen and (min-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    //1200px
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big_desktop {
+    //1750px
+    @media only screen and (min-width: 1750px) {
+      @content;
+    }
+  }
+}

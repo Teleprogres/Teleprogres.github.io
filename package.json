@@ -1,0 +1,14 @@
+{
+  "name": "projet-_3_openclassroms",
+  "version": "1.0.0",
+  "description": "Vente repas en ligne",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Teleprogres",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
