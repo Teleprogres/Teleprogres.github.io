@@ -8,11 +8,11 @@
   top: 0;
   @include flexCenter;
   // background-color: rgb(179, 168, 238);
-    background-image: linear-gradient(
-        to left bottom,
-        $color_primary 10%,
-       $color_secondary
-      );
+  background-image: linear-gradient(
+    to left bottom,
+    $color_primary 10%,
+    $color_secondary
+  );
   animation: loader 5s linear forwards;
 
   &::after {
@@ -66,6 +66,88 @@
 .sec-title-main {
   background-color: #f6f6f6;
 }
+//Foncionnement
+
+.aside {
+  background-color: $color_white;
+  margin: 6rem 2rem;
+
+  &-list {
+    @include flexCenter;
+    flex-wrap: wrap;
+    list-style-type: none;
+    color: $color_text-primary;
+  }
+
+  &-btn {
+    @include flexCenter;
+    flex-wrap: wrap;
+    flex: 0 0 95%;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: #faf9f9;
+    margin: 0 1.4rem 2rem 0;
+    box-shadow: 0.5rem 0.5rem 1rem rgba($color_text-primary, 0.1);
+    border: none;
+    border-radius: 999.9rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: $font-display;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    @include responsive(phone-small) {
+      font-size: $font_size-very-small;
+      width: 80%;
+    }
+    @include responsive(phone) {
+      flex-basis: 45%;
+      margin-right: 2rem;
+      &:last-child {
+        flex-basis: 50%;
+      }
+    }
+    @include responsive(portable) {
+      flex-basis: 30%;
+      font-size: $font_size-small-paragraph;
+      &:last-child {
+        flex-basis: 30%;
+      }
+    }
+    @include responsive(desktop) {
+      margin-right: 2.5rem;
+    }
+    &:hover {
+      background-color: lighten($color_secondary, 22%);
+      .aside-icon {
+        color: darken($color_primary, 20%);
+      }
+    }
+    &:active {
+      box-shadow: 0.5rem 0.5rem 1rem rgba($color_text-primary, 0.3);
+      transform: translateY(-2px);
+    }
+  }
+  &-numbre {
+    margin-left: -2.9rem;
+    font-size: $font_size-very-small;
+    padding: 0.5rem 0.7rem;
+    background-color: $color_primary;
+    border-radius: 100%;
+    color: $color_white;
+    @include responsive(phone-small) {
+      font-size: $font_size-small-paragraph;
+    }
+  }
+
+  &-box {
+    @include flexCenter;
+    width: 100%;
+  }
+  &-icon {
+    margin-right: 1rem;
+  }
+}
+
 ///Contenaire global
 .restaurant {
   background-color: $color_grey_light;
