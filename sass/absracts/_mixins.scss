@@ -45,4 +45,10 @@
       @content;
     }
   }
+  @if $breakpoint == big_desktop {
+    //1750px
+    @media only screen and (min-width: 1750px) {
+      @content;
+    }
+  }
 }
