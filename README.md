@@ -1,5 +1,3 @@
-# Teleprogres.github.io
-OhMyFood
 
 
 

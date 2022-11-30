@@ -9,7 +9,7 @@
       $color_secondary,
       $color_primary
     );
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     text-align: center;
     border: none;
     border-radius: 9999px;
@@ -36,9 +36,6 @@
       transform: translateY(-1px);
     }
     @include responsive(phone-small) {
-      font-size: $font_size-very-small;
-    }
-    @include responsive(phone) {
       font-size: $font_size-small;
     }
   }

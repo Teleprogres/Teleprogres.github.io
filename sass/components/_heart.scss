@@ -1,6 +1,5 @@
 // heart coeur
 .card-descriptive-right {
-  border: 1px solid black;
   position: relative;
   margin-right: 2rem;
   top: -1rem; //important pour alignement
@@ -9,20 +8,20 @@
     color: $color_text-secondary;
     cursor: pointer;
     &:hover {
+      // forwars pour q'il reste en dernier etat animation scale(1.01)
       animation: heart_to_animate 2s linear forwards;
     }
     @include responsive(phone-small) {
       font-size: $font_size-big;
     }
-    @include responsive(portable) {
-      &:hover {
-        animation: heart_to_animate 1s linear forwards;
-      }
-    }
+    // @include responsive(portable) {
+    //   &:hover {
+    //     animation: heart_to_animate 1s linear forwards;
+    //   }
+    // }
   }
   &-icon_p {
     @extend .card-descriptive-right-icon_v;
-
     opacity: 0;
     color: transparent;
     transform-origin: center;

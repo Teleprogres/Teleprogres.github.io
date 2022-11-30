@@ -1,16 +1,18 @@
 //Page d'accueil home
-
 // titre principal
 .heading {
   text-align: center;
+
   &-main {
+    margin: 0 auto;
+    width: 80%;
     padding-top: 2.5rem;
     font-size: $font_size-small;
     font-weight: 900;
     color: $color_text-primary;
 
     @include responsive(phone-small) {
-      font-size: $font_size-medium;
+      font-size: 2.2rem;
     }
     @include responsive(phone) {
       font-size: $font_size-big;
@@ -23,10 +25,12 @@
     margin: 1.2rem auto 2.5rem;
     font-size: $font_size-small;
     font-weight: 400;
-    text-align: center;
     color: $color_text-secondary;
     backface-visibility: hidden;
 
+    @include responsive(portable) {
+      font-size: $font_size-medium;
+    }
     @include responsive(big_desktop) {
       animation: moveInRight 2s ease-in-out 5s;
     }
@@ -34,17 +38,30 @@
 }
 
 //partie aside
-.aside-heading {
-  margin-bottom: 2rem;
-  font-size: $font_size-small;
-  @include responsive(phone-small) {
-    font-size: $font_size-medium;
+.aside {
+  &-heading {
+    margin-bottom: 2rem;
+    font-size: $font_size-small;
+    @include responsive(phone-small) {
+      font-size: $font_size-medium;
+    }
+    @include responsive(phone) {
+      margin-left: 5%;
+    }
+    @include responsive(portable) {
+      margin-left: 2%;
+    }
   }
-  @include responsive(phone) {
-    margin-left: 5%;
-  }
-  @include responsive(portable) {
-    margin-left: 2%;
+  &-paragraph {
+    @include responsive(phone-small) {
+      margin-right: 1.5rem;
+    }
+    @include responsive(phone) {
+      margin-right: 0;
+    }
+     &_1{
+      margin-right: 0px;
+    }
   }
 }
 

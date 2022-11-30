@@ -3,11 +3,13 @@
   0% {
     transform: rotateZ(0deg);
   }
+
   50% {
     transform: rotateZ(180deg);
   }
+
   100% {
-    transform: rotateZ(360deg);
+    transform: rotatez(360deg);
   }
 }
 
@@ -16,14 +18,17 @@
   0% {
     opacity: 0;
   }
+
   30% {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   60% {
-    opacity: 0.5;
+    opacity: 0.3;
     transform: translateY(-4px);
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -34,30 +39,21 @@
 @keyframes heart_to_animate {
   10% {
     opacity: 0.1;
-    transform: scale(0);
+    transform: scale(0.1);
   }
   20% {
     opacity: 0.2;
   }
   30% {
-    opacity: 0.5;
-    transform: scale(0.1);
-  }
-
-  40% {
-    opacity: 0.4;
+    opacity: 0.7;
+    transform: scale(0.4);
   }
   50% {
-    transform: scale(0.6);
-    opacity: 0.5;
-  }
-
-  70% {
-    opacity: 0.7;
     transform: scale(0.8);
   }
-  80% {
+  70% {
     opacity: 0.8;
+    transform: scale(0.9);
   }
   90% {
     opacity: 0.9;
@@ -65,43 +61,10 @@
   }
   100% {
     opacity: 1;
-    transform: scale(1.09);
+    transform: scale(1.01);
   }
 }
-//
-@keyframes heart_to_animate_inverse {
-  100% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.9;
-  }
-  80% {
-    opacity: 0.8;
-  }
 
-  70% {
-    opacity: 0.7;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  30% {
-    opacity: 0.3;
-  }
-  20% {
-    opacity: 0.2;
-  }
-  0% {
-    opacity: 0;
-  }
-}
 // loader
 @keyframes loading {
   from {
@@ -111,11 +74,13 @@
     transform: rotate(1turn);
   }
 }
+
 @keyframes loader {
   99.99% {
     height: 100%;
     width: 100%;
   }
+
   100% {
     visibility: hidden;
     width: 0;
@@ -137,22 +102,21 @@
 
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translatex(0);
   }
 }
+
 // paragraph principal
 @keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(10rem);
   }
-
   80% {
     transform: translateX(-1rem);
   }
-
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translatex(0);
   }
 }
